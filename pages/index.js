@@ -1,13 +1,19 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
-         <title>Home</title>
-         <link rel="icon" href="/app-logo.ico"/>
+        <title>Home</title>
+        <link rel="icon" href="/app-logo.ico" />
       </Head>
-       <h1>Test</h1>
-    </div>
+      <div className="container">
+        <Link href="/login">
+          <a> Login Button</a>
+        </Link>
+      </div>
+    </>
+
   )
 }
