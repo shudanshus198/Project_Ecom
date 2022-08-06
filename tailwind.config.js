@@ -12,6 +12,12 @@ module.exports = {
         githubBlack: '#24292f',
         redishPink: '#fe2c54',
         blueForget: '#0969da',
+        navbarBg: '#242526',
+        cardBackground: '#242526',
+        navItemBackground: '#484a4d'
+      },
+      animation: {
+        'spin-one': 'spin 3s linear '
       }
     },
   },

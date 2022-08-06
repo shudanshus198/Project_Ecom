@@ -6,15 +6,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoginButton from "../components/login_Btn";
 import { useEffect } from "react";
 import Router from "next/router";
+import Loader from "../components/Loader";
 
 const Login = ({providers}) => {
-    const data = useSession();
+    const {data , status} = useSession();
+
     useEffect(() => {
-        const {status} = data;
         if(status === 'authenticated') {
           Router.push('/');
         }
     });
+
+    if (status !== 'unauthenticated') {
+       return (
+         <Loader />
+       )
+    }
+
     return (
         <>
             <Head>
@@ -38,7 +46,7 @@ const Login = ({providers}) => {
                       btnColor={'#24292f'}
                     />
                     <div className="bg-white w-4/5 md:w-2/3 my-3 mx-auto flex justify-between border-gray border-2 rounded focus-within:border-blue-500">
-                        <div className=" md:ml-3 ml-1 md:p-3 p-2.5">
+                        <div className="w-11 h-11 md:ml-3 ml-1 md:p-3 p-2.5">
                             <FontAwesomeIcon icon={faEnvelope} size={'lg'} color={'gray'} />
                         </div>
                         <div className="flex-1 py-3 pl-3">
@@ -46,7 +54,7 @@ const Login = ({providers}) => {
                         </div>
                     </div>
                     <div className="bg-white w-4/5 md:w-2/3 my-3 mx-auto flex justify-between border-gray border-2 rounded focus-within:border-blue-500">
-                        <div className="w-10 md:ml-3 ml-1 md:p-3 p-2.5">
+                        <div className="w-11 h-11 md:ml-3 ml-1 md:p-3 p-2.5">
                             <FontAwesomeIcon icon={faLock} size={'lg'} color={'gray'} />
                         </div>
                         <div className="flex-1 py-3 pl-3">

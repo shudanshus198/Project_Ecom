@@ -11,6 +11,9 @@ const nextConfig = {
 
     return config
   },
+  images: {
+    domains: ['platform-lookaside.fbsbx.com', 'lh3.googleusercontent.com', 'avatars.githubusercontent.com']
+  }
 }
 
 module.exports = nextConfig
