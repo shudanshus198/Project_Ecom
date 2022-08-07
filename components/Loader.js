@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Loader = () => {
+   console.log('mongo', process.env.DATABASE_URL);
     return ( 
         <div className="w-full min-h-screen flex justify-center items-center">
            <div className="flex">

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import {getSession, getProviders, useSession } from "next-auth/react";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,16 +8,16 @@ import LoginButton from "../components/login_Btn";
 import { useEffect } from "react";
 import Router from "next/router";
 import Loader from "../components/Loader";
+import Background from '../public/images/loginPage.svg'
+
 
 const Login = ({providers}) => {
     const {data , status} = useSession();
-
     useEffect(() => {
         if(status === 'authenticated') {
           Router.push('/');
         }
     });
-
     if (status !== 'unauthenticated') {
        return (
          <Loader />
@@ -82,6 +83,9 @@ const Login = ({providers}) => {
                         </a>
                         </Link>
                     </div>
+                </div>
+                <div className="ml-2 hidden lg:block">
+                    <Background />
                 </div>
             </div>
         </>
