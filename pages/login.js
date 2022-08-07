@@ -28,8 +28,8 @@ const Login = ({providers}) => {
             <Head>
                 <title>Ecom | Login</title>
             </Head>
-            <div className="container h-screen flex justify-center items-center p-5 bg-black">
-                <div className="container md:w-1/3 sm:w-full bg-white rounded md:p-5 sm:p-2 mb-4">
+            <div className="container w-full h-screen flex justify-center items-center p-5 bg-loginBg">
+                <div className="container md:w-1/3 sm:w-full bg-white rounded-xl md:p-5 sm:p-2 mb-4">
                     <div className="xl:text-2xl text-lg text-center border-solid border-gray-300 border-0 border-b-2 p-2">
                        <h1>Login to Your Eccom Account</h1>
                     </div>

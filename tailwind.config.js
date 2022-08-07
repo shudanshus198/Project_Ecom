@@ -13,6 +13,7 @@ module.exports = {
         redishPink: '#fe2c54',
         blueForget: '#0969da',
         navbarBg: '#242526',
+        loginBg: '#f0f2f5',
         cardBackground: '#242526',
         navItemBackground: '#484a4d'
       },
